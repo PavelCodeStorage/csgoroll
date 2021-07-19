@@ -24,7 +24,7 @@ Feature: cs_go_roll
     Then The PROFIT ON WIN is equal to "0"
     And BetAmount error is displayed
 
-  @bet @cs_go_roll @clear
+  @bet @cs_go_roll @spray
   Scenario: User can clear fields
     Given User on cs_go_roll application
     When User click spray ripple element
