@@ -1,0 +1,20 @@
+{
+  "$schema": "https://on.cypress.io/cypress.schema.json",
+  "testFiles": "**/*.feature",
+  "defaultCommandTimeout": 50000,
+  "execTimeout": 50000,
+  "taskTimeout": 50000,
+  "pageLoadTimeout": 20000,
+  "requestTimeout": 20000,
+  "responseTimeout":20000,
+  "videoCompression": 20,
+  "viewportWidth": 1600,
+  "viewportHeight": 1300,
+
+   "chromeWebSecurity": false,
+
+  "retries": {
+    "runMode": 2,
+    "openMode": 2
+}
+}

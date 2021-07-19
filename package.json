@@ -1,0 +1,49 @@
+{
+  "name": "cs-go-roll",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+  },
+  "description": "e2e automation",
+  "main": "index.js",
+  "scripts": {
+    "debug_test": "npx cypress open",
+    "test": "npx cypress run --spec **/csGo.feature --config video=false --env allure=true,allureResultsPath=allure-results --browser electron",
+    "test_by_tag": "npx cypress-tags run -e TAGS='@sharingName12345' --config video=true --browser electron",
+    "lint": "eslint '**/*.js' --fix",
+    "prettier": "prettier --write '**/*.js'",
+    "report": "allure generate --clean && allure open"
+  },
+  "keywords": [
+    "cypress",
+    "e2e"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "allure-commandline": "^2.9.0",
+    "chai": "^4.2.0",
+    "cypress": "^6.0.1",
+    "cypress-cucumber-preprocessor": "^4.0.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-cypress": "^2.11.2",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.3",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.0",
+    "node-fetch": "^2.6.0",
+    "prettier": "^2.0.5"
+  },
+  "devDependencies": {
+    "@shelex/cypress-allure-plugin": "^1.8.5",
+    "babel-eslint": "^10.1.0",
+    "cypress-file-upload": "^5.0.6",
+    "cypress-localstorage-commands": "^1.4.1"
+  },
+  "cypress-cucumber-preprocessor": {
+    "step_definitions": "cypress/integration/steps/**/"
+  }
+}
