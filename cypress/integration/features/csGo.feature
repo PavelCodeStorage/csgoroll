@@ -25,7 +25,7 @@ Feature: cs_go_roll
     And BetAmount error is displayed
 
   @bet @cs_go_roll @spray
-  Scenario: User can clear fields
+  Scenario: User can see spray ripple
     Given User on cs_go_roll application
     When User click spray ripple element
     Then Spray ripple element is displayed
