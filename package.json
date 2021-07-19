@@ -8,7 +8,7 @@
   "main": "index.js",
   "scripts": {
     "debug_test": "npx cypress open",
-    "test": "npx cypress run --spec **/csGo.feature --config video=false --env allure=true,allureResultsPath=allure-results --browser electron",
+    "test": "npx cypress run --spec **/csGo.feature --config video=true --env allure=true,allureResultsPath=allure-results --browser electron",
     "test_by_tag": "npx cypress-tags run -e TAGS='@bet' --config video=true --browser electron",
     "lint": "eslint '**/*.js' --fix",
     "prettier": "prettier --write '**/*.js'",
